@@ -10,15 +10,16 @@ source:
   sha256: 6072f9a583059f8ff313f8544d415b4191fc89bdf6230259b0527b706ab1837b
 
 build:
-  number: 0
+  number: 1
+  noarch: python
   script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
   host:
-    - python
+    - python  >=3.5
     - pip
   run:
-    - python
+    - python  >=3.5
     - requests
     - lxml
     - python-dateutil
