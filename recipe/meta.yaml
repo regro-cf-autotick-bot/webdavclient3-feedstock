@@ -11,14 +11,15 @@ source:
 
 build:
   number: 1
+  noarch: python
   script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
   host:
-    - python
+    - python  >=3.5
     - pip
   run:
-    - python
+    - python  >=3.5
     - requests
     - lxml
     - python-dateutil
