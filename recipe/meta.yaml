@@ -1,5 +1,5 @@
 {% set name = "webdavclient3" %}
-{% set version = "3.14.5" %}
+{% set version = "3.14.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 6072f9a583059f8ff313f8544d415b4191fc89bdf6230259b0527b706ab1837b
+  sha256: bcd22586bb0d58abc26ca56054fd04228e704bd36073c3080f4597c1556c880d
 
 build:
-  number: 1
+  number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -33,7 +33,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE.md
-  summary: 'Easy way to work with WebDAV-servers'
+  summary: Easy way to work with WebDAV-servers
 
   description: |
     WebDAV client, based on original package https://github.com/designerror/webdav-client-python but
